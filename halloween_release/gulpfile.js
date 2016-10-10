@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var $    = require('gulp-load-plugins')();
+var panini = require('panini');
 
 var sassPaths = [
   'bower_components/foundation-sites/scss',
@@ -18,7 +19,19 @@ gulp.task('sass', function() {
     }))
     .pipe(gulp.dest('css'));
 });
+gulp.task('panini', function() {
+  gulp.src('pages/**/*.html')
+    .pipe(panini({
+      root: 'pages/',
+      layouts: 'layouts/',
+      partials: 'partials/',
+      helpers: 'helpers/',
+      data: 'data/'
+    }))
+    .pipe(gulp.dest('build'));
+});
 
-gulp.task('default', ['sass'], function() {
+gulp.task('default', ['sass', 'panini'], function() {
   gulp.watch(['scss/**/*.scss'], ['sass']);
+  gulp.watch(['./src/{layouts,partials,helpers,data}/**/*'], [panini.refresh]);
 });
