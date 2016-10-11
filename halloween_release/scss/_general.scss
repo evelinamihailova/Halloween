@@ -4,3 +4,26 @@ body{
 .hide {
     display:none;
 }
+.centred{
+  margin: auto;
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+@font-face {
+    font-family: 'halloween';
+    src: url('../fonts/October Crow.ttf') format('truetype');
+   // src: url('../fonts//Hells Kittchen Devil God/Hells Kittchen Devil God.ttf') format('truetype');
+}
+h1{
+  font-family: halloween;
+  font-size: 60px;
+  color: white;
+}
+.pumpkin{
+  position: relative;
+  height: 100%;
+  width:100%;
+}

@@ -1,0 +1,10 @@
+@keyframes pulse {
+    0% {box-shadow: 0 0 20px rgba(242, 239, 136, 0.4);}
+    50% {box-shadow: 0 0 40px rgba(242, 239, 136, 1);}
+    100% {box-shadow: 0 0 20px rgba(242, 239, 136, 0.4);}
+}
+@-webkit-keyframes pulse {
+    0% {box-shadow: 0 0 20px rgba(242, 239, 136, 0.4);}
+    50% {box-shadow: 0 0 40px rgba(242, 239, 136, 1);}
+    100% {box-shadow: 0 0 20px rgba(242, 239, 136, 0.4);}
+}
