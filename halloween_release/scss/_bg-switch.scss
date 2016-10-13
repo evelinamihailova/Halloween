@@ -1,4 +1,10 @@
 .bg{
+  &>svg:first-child{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+  }
   text-align: center;
   width: 100%;
   padding: 40px;
@@ -6,19 +12,12 @@
   position: absolute;
   background: linear-gradient(to bottom, #BE4405, #F6C60C);
 }
-.night.bg{
-  background: linear-gradient(to bottom, #000000, #012560);
-}
+.night.bg{@include linearGradient(#cccccc, #666666);}
 
-.bg-switch,
-.circle {
-  height: 30px;
-  -webkit-transition: all 0.4s cubic-bezier(0.54, 1.6, 0.5, 1);
-          transition: all 0.4s cubic-bezier(0.54, 1.6, 0.5, 1);
-} 
-.bg-switch {
-  width: 60px;
-  height: 29px;
+
+.multistate-switch {
+  width: 350px;
+  height: 24px;
   margin: 0 auto;
   border: 1px solid white;
   border-radius: 14px;
@@ -26,21 +25,23 @@
   background: #DA8508;
   position: relative;
 }
-.circle {
+.handle {
   top: 3px;
   left: 4px;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   position: absolute;
   border-radius: 50%;
   box-shadow: 0 4px 4px rgba(26,53,71,0.25), 0 0 0 1px rgba(26,53,71,0.07);
   background: #e9e5d5;
+  -webkit-transition: all 0.4s cubic-bezier(0.54, 1.6, 0.5, 1);
+          transition: all 0.4s cubic-bezier(0.54, 1.6, 0.5, 1);
 }
 .switched {
   border-color: white !important;
   background: #1C3958 !important;
 }
-.switched .circle {
+.switched .handle {
   left:auto;
   right: 4px !important;
   background: #e9e5d5;

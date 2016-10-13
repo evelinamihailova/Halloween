@@ -1,10 +1,11 @@
 <div class="bg">
+  {{> background-svg}}
   <h1>Trick or treat?</h1>
   <div class="pumpkin">
     {{> pumpkin-svg}}
     {{> lens-svg}}
   </div>
-  <div class="bg-switch" onclick="changeBg();">
-    <div class="circle"></div>
+  <div id="moodSwitch" class="multistate-switch" onclick="changeBg();">
+    <div class="handle"></div>
   </div>
 </div>
