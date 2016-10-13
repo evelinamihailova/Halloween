@@ -2,10 +2,22 @@
   {{> background-svg}}
   <h1>Trick or treat?</h1>
   <div class="pumpkin">
-    {{> pumpkin-svg}}
+    {{> depressed-pumpkin}}
     {{> lens-svg}}
   </div>
-  <div id="moodSwitch" class="multistate-switch" onclick="changeBg();">
+  <div class="pumpkin hide">
+    {{> evil-pumpkin}}
+    {{> lens-svg}}
+  </div>
+  <div class="pumpkin hide">
+    {{> happy-pumpkin}}
+    {{> lens-svg}}
+  </div>
+  <div class="pumpkin hide">
+    {{> naughty-pumpkin}}
+    {{> lens-svg}}
+  </div>
+  <div id="moodSwitch" class="multistate-switch">
     <div class="handle"></div>
   </div>
 </div>
