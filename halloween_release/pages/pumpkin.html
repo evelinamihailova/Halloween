@@ -2,22 +2,20 @@
   {{> background-svg}}
   <h1>Trick or treat?</h1>
   <div class="pumpkin">
-    {{> depressed-pumpkin}}
+    {{> pumpkin}}
     {{> lens-svg}}
-  </div>
-  <div class="pumpkin hide">
-    {{> evil-pumpkin}}
-    {{> lens-svg}}
-  </div>
-  <div class="pumpkin hide">
-    {{> happy-pumpkin}}
-    {{> lens-svg}}
-  </div>
-  <div class="pumpkin hide">
-    {{> naughty-pumpkin}}
-    {{> lens-svg}}
+    <div id="LEDs">
+      <div></div>
+      <div></div>
+    </div>
   </div>
   <div id="moodSwitch" class="multistate-switch">
     <div class="handle"></div>
+    <ul class="states">
+      <li data-mood="depressed"><span>Depressed</span></li>
+      <li data-mood="evil"><span>Evil</span></li>
+      <li data-mood="happy"><span>Happy</span></li>
+      <li data-mood="custom"><span>Custom</span></li>
+    </ul>
   </div>
 </div>

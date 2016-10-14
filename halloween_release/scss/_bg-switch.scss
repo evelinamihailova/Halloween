@@ -10,9 +10,12 @@
   padding: 40px;
   min-height: 100%;
   position: absolute;
-  background: linear-gradient(to bottom, #BE4405, #F6C60C);
+ // background: linear-gradient(to bottom, #BE4405, #F6C60C);
+  &.depressed{@include linearGradient(#cccccc, #666666);}
+  &.happy{@include linearGradient(#BE4405, #F6C60C);}
+  &.evil{@include linearGradient(#c70808, #330000);}
+  &.manual{@include linearGradient(#7707be, #000);}
 }
-.night.bg{@include linearGradient(#cccccc, #666666);}
 
 
 .multistate-switch {
@@ -24,6 +27,40 @@
   margin-top: 40px;
   background: #DA8508;
   position: relative;
+  ul.states {
+    list-style-type: none;
+    line-height: 20px;
+    margin: 0;
+    width:100%;
+    li{
+      display: inline-block;
+      width:25%;
+      height:22px;
+      float:left;
+      position: relative;
+      span{
+        position: relative;
+        font-size: 11px;
+        text-transform: uppercase;
+      }
+      &:first-child span{
+        top:25px;
+        left:-50%;
+      }
+      &:nth-child(2) span{
+        top:-25px;
+        left:-25%;
+      }
+      &:nth-child(3) span{
+        top:25px;
+        left:25%;
+      }
+      &:last-child span{
+        top:-25px;
+        left:50%;
+      }
+    }
+  }
 }
 .handle {
   top: 3px;
@@ -33,16 +70,15 @@
   position: absolute;
   border-radius: 50%;
   box-shadow: 0 4px 4px rgba(26,53,71,0.25), 0 0 0 1px rgba(26,53,71,0.07);
-  background: #e9e5d5;
-  -webkit-transition: all 0.4s cubic-bezier(0.54, 1.6, 0.5, 1);
-          transition: all 0.4s cubic-bezier(0.54, 1.6, 0.5, 1);
+//  -webkit-transition: all 0.4s cubic-bezier(0.54, 1.6, 0.5, 1);
+//          transition: all 0.4s cubic-bezier(0.54, 1.6, 0.5, 1);
 }
 .switched {
   border-color: white !important;
   background: #1C3958 !important;
 }
 .switched .handle {
-  left:auto;
+  left:auto !important;
   right: 4px !important;
   background: #e9e5d5;
 }
