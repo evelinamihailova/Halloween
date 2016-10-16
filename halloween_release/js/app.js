@@ -47,6 +47,29 @@ moodSwitch.click(function(e) {
 
 $(document).ready(function() {
   //show popup with question door
-  
   setMood('depressed');
+  var matrices = $('#ledMatrics').data('matrices');
+  ledMatrics(matrices);
 });
+
+// MATRIX
+
+function ledMatrics(amount) {
+  var matrices = amount;
+  var rows = 7;
+  var columns = 7;
+  var html='', lines='';
+  for(i=0;i<rows;i++){
+    lines += '<li>';
+    for(j=0;j<columns;j++){
+      lines += '<div class="led"></div>'
+    }
+    lines += '</li>';
+  }
+  var frame = '<ul>' + lines + '</ul>';
+  for(i=0;i<matrices;i++){
+    html+=frame;
+  }
+  html+="<div class='text'>Boo</div>";
+  $('#ledMatrics').html(html); 
+}
