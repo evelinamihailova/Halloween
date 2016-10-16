@@ -1,7 +1,6 @@
 $(document).foundation();
 
 var bg = $('.bg');
-var moodSwitch = $('#moodSwitch');
 var depressedAudio = new Audio('../sounds/Hl.mp3');
 var happyAudio = new Audio('../sounds/Maniacal Witches Laugh.mp3');
 var evilAudio = new Audio('../sounds/Demon_Your_Soul_is_mine.mp3');
@@ -12,13 +11,41 @@ var hideFaces = function(){
   $('#evilFace').hide();
   $('#depressedFace').hide();
 };
-var setMood = function (mood) {
+
+
+$(document).ready(function() { 
+  $('#trickOrTreat').foundation('open');
+  
+  $('#showTrick').click(function(){
+    setMood('evil');
+  });
+  $('#showTreat').click(function(){
+    setMood('happy');
+  });
+  
+  $('#moodSwitch').click(function(e) {
+  var mood, elm = $(e.target);
+
+  if(elm.is("li") ){
+    mood = elm.data("mood");
+  } else if (elm.is("span")){
+    mood = elm.parent().data("mood");
+  }
+  if(mood) setMood(mood);
+});
+  
+  var matrices = $('#ledMatrics').data('matrices');
+  ledMatrics(matrices);
+});
+
+function setMood(mood) {
+  $('.main').removeClass('hide');
   switchPumpkin(mood);
   bg.attr('class', 'bg' + ' ' + mood);
-  moodSwitch.attr('class', 'multistate-switch' + ' ' + mood);
-};
+  $('#moodSwitch').attr('class', 'multistate-switch' + ' ' + mood);
+}
 
-var switchPumpkin = function (mood) {
+function switchPumpkin(mood) {
   hideFaces();
   $('#' + mood + 'Face').show();
   switch(mood){
@@ -35,24 +62,7 @@ var switchPumpkin = function (mood) {
      // customAudio.play();
     break;
   }
-};
-moodSwitch.click(function(e) {
-  var mood, elm = $(e.target);
-
-  if(elm.is("li") ){
-    mood = elm.data("mood");
-  } else if (elm.is("span")){
-    mood = elm.parentElement.data("mood");
-  }
-  if(mood) setMood(mood);
-});
-
-$(document).ready(function() { 
-  $('#trickOrTreat').foundation('open');
-  setMood('depressed');
-  var matrices = $('#ledMatrics').data('matrices');
-  ledMatrics(matrices);
-});
+}
 
 // MATRIX
 

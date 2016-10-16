@@ -28,9 +28,7 @@ h1{
   text-shadow: 2px 2px 3px brown;
 }
 .reveal{
-  background: radial-gradient(#60f800, transparent);
-  background-blend-mode: screen;
- // @include linearGradient(#00ffff, #64eb00);
+  padding: 70px 30px;
 }
 .pumpkin{
   position: relative;

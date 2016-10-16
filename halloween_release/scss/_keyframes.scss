@@ -9,6 +9,18 @@
     100% {box-shadow: 0 0 20px rgba(242, 239, 136, 0.4);}
 }
 
+//@-webkit-keyframes blinkRed {
+//    from { background-color: #F00; }
+//    50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+//    to { background-color: #F00; }
+//}
+//@keyframes blinkRed {
+//    from { background-color: #F00; }
+//    50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+//    to { background-color: #F00; }
+//}
+
+
 /* Scrollimg text */
 @-moz-keyframes scroll-left {
  0%   { -moz-transform: translateX(100%); }
