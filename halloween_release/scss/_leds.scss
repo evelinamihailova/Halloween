@@ -80,15 +80,18 @@
 
 // MATRIX
 #ledMatrics{
-  position: absolute;
-  width: calc(100% - 100px);
-  height: auto;
-  top: 65%;
-  text-align: center;
+    position: absolute;
+    width: 165px;
+    height: auto;
+    top: 65%;
+    text-align: center;
+    margin: auto;
+    left: 0;
+    right: 0;
   ul{
     height:auto;
     width:auto;
-    margin: 2px;
+    margin: 0 1px;
     float: left;
     display: inline-block;
     list-style: none;
@@ -97,22 +100,56 @@
     li{
       padding: 0;
       width: 100%;
-      margin: 0;
+      margin: 0 auto;
       height: 8px;
+      line-height: 0px;
       div.led{
         display: inline-block;
         width:8px;
         height:8px;
-        border:black;
-        background-color: red;
-        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #006 0 -1px 9px, #3F8CFF 0 2px 14px;
+        
+        margin: 0 -0.5px;
+        background-color: #27005d;
+        border: 1px solid black;
+        border-radius: 100%;
+        box-shadow: rgba(0,0,0,0.2) 0 -1px 2px 1px,inset red 0 -1px 3px,#000 0 2px 1px;
       }
     }
   }
-  .text{
+  .text{	
+    overflow: hidden;
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 60px;
     font-family: 'digital';
-    font-size: 80px;
+    font-size: 85px;
+    letter-spacing: 4px;
     line-height: 45px;
+    text-align: center;
+    color: red;
+    font-weight: 600;
+    p {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 0;
+      height: 100%;
+      padding: 2px 8px;
+      margin: 0;
+      line-height: 50px;
+      text-align: center;
+      &.scrolling{
+        /* Starting position */
+        -moz-transform:translateX(100%);
+        -webkit-transform:translateX(100%);	
+        transform:translateX(100%);
+        /* Apply animation to this element */	
+        -moz-animation: scroll-left 5s linear infinite;
+        -webkit-animation: scroll-left 5s linear infinite;
+        animation: scroll-left 5s linear infinite;
+      }
+    }
   }
 }
 .config {

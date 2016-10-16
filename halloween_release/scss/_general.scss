@@ -1,4 +1,3 @@
-
 body{
   text-align: center;
 }
@@ -25,7 +24,13 @@ body{
 h1{
   font-family: halloween;
   font-size: 60px;
-  color: white;
+  color: red;
+  text-shadow: 2px 2px 3px brown;
+}
+.reveal{
+  background: radial-gradient(#60f800, transparent);
+  background-blend-mode: screen;
+ // @include linearGradient(#00ffff, #64eb00);
 }
 .pumpkin{
   position: relative;
@@ -33,4 +38,7 @@ h1{
   height: 100%;
   width:100%;
   min-width: 350px;
+  max-height: 700px;
+  max-width: 500px;
+  margin: auto;
 }

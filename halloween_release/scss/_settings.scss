@@ -450,11 +450,11 @@ $progress-radius: $global-radius;
 // 28. Reveal
 // ----------
 
-$reveal-background: $white;
+$reveal-background: transparent;
 $reveal-width: 600px;
 $reveal-max-width: $global-width;
-$reveal-padding: $global-padding;
-$reveal-border: 1px solid $medium-gray;
+$reveal-padding: 30px;
+$reveal-border: none;
 $reveal-radius: $global-radius;
 $reveal-zindex: 1005;
 $reveal-overlay-background: rgba($black, 0.45);

@@ -1,3 +1,5 @@
+$(document).foundation();
+
 var bg = $('.bg');
 var moodSwitch = $('#moodSwitch');
 var depressedAudio = new Audio('../sounds/Hl.mp3');
@@ -21,16 +23,16 @@ var switchPumpkin = function (mood) {
   $('#' + mood + 'Face').show();
   switch(mood){
     case "depressed":
-      depressedAudio.play();
+     // depressedAudio.play();
     break;
     case "evil":
-      evilAudio.play();
+     // evilAudio.play();
     break;
     case "happy":
-      happyAudio.play();
+     // happyAudio.play();
     break;
     case "custom":
-      customAudio.play();
+     // customAudio.play();
     break;
   }
 };
@@ -45,8 +47,8 @@ moodSwitch.click(function(e) {
   if(mood) setMood(mood);
 });
 
-$(document).ready(function() {
-  //show popup with question door
+$(document).ready(function() { 
+  $('#trickOrTreat').foundation('open');
   setMood('depressed');
   var matrices = $('#ledMatrics').data('matrices');
   ledMatrics(matrices);
@@ -70,6 +72,6 @@ function ledMatrics(amount) {
   for(i=0;i<matrices;i++){
     html+=frame;
   }
-  html+="<div class='text'>Boo</div>";
+  html+="<div class='text'><p>Boo</p></div>";
   $('#ledMatrics').html(html); 
 }
