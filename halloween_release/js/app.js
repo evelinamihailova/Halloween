@@ -55,16 +55,20 @@ $(document).ready(function() {
   $('#ledMatrix p').click(function() {
     var text = $(this).html();
     $(this).replaceWith('<input value="'+text+'" type=text>');
-    console.log(this);
-    $(this).focus();
+    
+    $('#ledMatrix input').focus();
   });
 
+  $('#ledMatrix input').on('blur', function() {
+    debugger
+  });
   $('#ledMatrix input').keypress(function(e) {
-    var
-    var text = $(this).val();
+    debugger;
+    var input = $(this);
+    var text = input.val();
     if(e.which == 13) {
-      $(this).blur();
-      $(this).replaceWith('<p>'+text+'</p>');
+      input.blur();
+      input.replaceWith('<p>'+text+'</p>');
       toScrollOrNotToScroll('#ledMatrix p');
     }
   });
@@ -124,6 +128,6 @@ function ledMatrix(amount) {
   for(i=0;i<matrix;i++){
     html+=frame;
   }
-  html+='<div class="text"><p>Booo</p>';
+  html+='<div class="text"><p>Booo</p></div>';
   $('#ledMatrix').html(html); 
 }
