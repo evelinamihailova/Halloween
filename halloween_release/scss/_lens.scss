@@ -1,4 +1,7 @@
 $color-primary: #c70e07;
+$color-grey: #747474;
+$color-yellow: #c1de48;
+$color-custom: #7e2fb9;
 
 * {
   box-sizing: border-box;
@@ -11,56 +14,90 @@ a.lens-container {
   position: absolute;
   top: 49%;
   left: 47%;
-}
-
-svg {
-  width: auto;
-  overflow: visible;
-  transition: all .3s ease-in-out;
-  g.outer {
-    fill: $color-primary;
-    transition: fill .5s ease-in;
-  }
-  g.outer, g.mid, g.inner, g.lens-flare {
-    transform-origin: 50% 50%;
-  }
-  g.mid {
-    fill: darken($color-primary, 25%);
-    transition: fill .5s ease-in;
-    path {
-      stroke: darken($color-primary, 25%);
-    }
-  }
-  g.inner {
-    stroke-width: 20;
-    fill: darken($color-primary, 25%);
-    transition: stroke-width .5s ease-in, fill .5s ease-in;
-  }
-  g.lens-flare {
-    opacity: .6;
-    transition: opacity 1s ease-in;
-  }
-}
-
-a:hover {
+  svg {
+    width: auto;
+    overflow: visible;
+    transition: all .3s ease-in-out;
     g.outer {
-      fill: darken($color-primary, 10%);
-      animation: rotate .5s ease-in-out .3s,
-        scale .3s ease-in-out;
+      fill: $color-primary;
+      transition: fill .5s ease-in;
+    }
+    g.outer, g.mid, g.inner, g.lens-flare {
+      transform-origin: 50% 50%;
     }
     g.mid {
-      animation: scale .4s ease-in-out .2s;
-      fill: lighten($color-primary, 20%);
+      fill: darken($color-primary, 25%);
+      transition: fill .5s ease-in;
+      path {
+        stroke: darken($color-primary, 25%);
+      }
     }
     g.inner {
-      animation: scale-inner .8s ease-in-out .3s;
-      fill: lighten($color-primary, 30%);
-      stroke-width: 25;
+      stroke-width: 20;
+      fill: darken($color-primary, 25%);
+      transition: stroke-width .5s ease-in, fill .5s ease-in;
     }
     g.lens-flare {
-      animation: scale-flare 1s ease-in-out .3s;
-      opacity: .8;
+      opacity: .6;
+      transition: opacity 1s ease-in;
     }
+  }
+  &:hover {
+      g.outer {
+        fill: darken($color-primary, 10%);
+        animation: rotate .5s ease-in-out .3s,
+          scale .3s ease-in-out;
+      }
+      g.mid {
+        animation: scale .4s ease-in-out .2s;
+        fill: lighten($color-primary, 20%);
+      }
+      g.inner {
+        animation: scale-inner .8s ease-in-out .3s;
+        fill: lighten($color-primary, 30%);
+        stroke-width: 25;
+      }
+      g.lens-flare {
+        animation: scale-flare 1s ease-in-out .3s;
+        opacity: .8;
+      }
+  }
+}
+.sad a.lens-container {
+  pointer-events: none;
+  g.outer, g.inner, g.mid {fill: $color-grey;}
+  g.mid path {stroke: darken($color-grey, 25%);}
+  g.lens-flare {display: none;}
+}
+.happy a.lens-container {
+  g.outer, g.inner, g.mid {fill: $color-yellow;}
+  g.mid path {stroke: darken($color-yellow, 25%);}
+  &:hover {
+    g.outer {
+      fill: darken($color-yellow, 10%);
+    }
+    g.mid {
+      fill: lighten($color-yellow, 20%);
+    }
+    g.inner {
+      fill: lighten($color-yellow, 30%);
+    }
+  }
+}
+.custom a.lens-container {
+  g.outer, g.inner, g.mid {fill: $color-custom;}
+  g.mid path {stroke: darken($color-custom, 25%);}
+  &:hover {
+    g.outer {
+      fill: darken($color-custom, 10%);
+    }
+    g.mid {
+      fill: lighten($color-custom, 20%);
+    }
+    g.inner {
+      fill: lighten($color-custom, 30%);
+    }
+  }
 }
 
 @keyframes rotate {

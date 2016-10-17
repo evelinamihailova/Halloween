@@ -1,3 +1,6 @@
+*:focus {
+    outline: none;
+}
 body{
   text-align: center;
 }
@@ -30,9 +33,15 @@ h1{
 .reveal{
   padding: 70px 30px;
 }
+#colorPicker{
+  background-color: #2a2a2a;
+  width: 150px;
+  input{
+  }
+}
 .pumpkin{
   position: relative;
-  padding: 50px;
+  padding: 30px 50px;
   height: 100%;
   width:100%;
   min-width: 350px;
