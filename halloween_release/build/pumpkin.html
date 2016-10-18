@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SLX | Halloween release</title>
     <link rel="stylesheet" href="../css/app.css" />
+    <style id="animation"></style>
   </head>
   <body>
     <div class="bg">
@@ -167,13 +168,13 @@
       		c0.1-0.1,0.1-0.3,0-0.3C23,76.7,22.9,76.7,22.8,76.9z"/>
       </g>
       </svg>
-      <div id="trickOrTreat" class="reveal" data-reveal>
+      <div id="trickOrTreat" class="full reveal" data-reveal>
         <h1>Trick or treat?</h1>
         <div class="row align-middle">
           <button id="showTrick" class="button" data-close type="button">Trick</button>
           <button id="showTreat" class="button" data-close type="button">Treat</button>
-          <a id="showCustom" href="" data-close>Avoid</a>
         </div>
+        <a id="showCustom" data-close>No, thanks</a>
       </div>
       <div class="main hide">
         <div class="pumpkin">
@@ -405,11 +406,16 @@
               <div class="led" data-toggle="colorPicker"></div>
             </div>
           </div>
-          <div id="ledMatrix" data-matrix="3"></div>
+          <div id="ledMatrix" data-matrix="3">
+            <div id="ledMatrixText" class="text">
+              <p>text</p>
+              <input class="hide" value="text" type="text">
+            </div>
+          </div>
         </div>
         <form id="colorPicker" class="dropdown-pane" data-dropdown>
-         
           <input name="color" type="color">
+          <input name="pulsate" type="checkbox" value="pulsate">
           <input class="button" value="Apply" data-close type="submit">
         </form>
         <div id="moodSwitch" class="multistate-switch">

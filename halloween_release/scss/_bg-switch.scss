@@ -18,11 +18,12 @@
   font-family:'halloween';
   font-size: 20px;
   padding: 10px 25px;
-  border: 1px solid transparent;
+  border: 1px solid rgba(255, 255, 255, 0.29);
+  margin-top: 40px;
 }
 .button:hover, button:hover{
-  border: 1px solid #892f07;
-  color: #892f07;
+  border: 1px solid #af3600;
+  color: #b53b04;
 }
 
 .multistate-switch {

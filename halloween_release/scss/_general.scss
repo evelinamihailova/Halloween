@@ -28,10 +28,27 @@ h1{
   font-family: halloween;
   font-size: 60px;
   color: red;
+  margin-top: 30px;
   text-shadow: 2px 2px 3px brown;
 }
 .reveal{
   padding: 70px 30px;
+  @include linearGradient(rgba(3, 119, 79, 0.66), #330000);
+  a{
+    position: fixed;
+    bottom: 60px;
+    color: white;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-family:'halloween';
+    &:hover{
+      color: #eb0707;
+    }
+  }
+}
+.no-scrolling{
+  animation: none!important;
 }
 #colorPicker{
   background-color: #2a2a2a;

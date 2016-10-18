@@ -49,10 +49,10 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-@import 
-    "scss/general",
+@import
     "scss/keyframes",
-    "scss/mixins",
+    "scss/mixins", 
+    "scss/general",
     "scss/bg-switch",
     "scss/leds",
     "scss/lens";
