@@ -71,26 +71,28 @@ function ledMatrix(amount) {
   }
   $('#ledMatrix .text').prepend(html);
 }
-
+function hexToRGB(hex) {
+  var r = hex >> 16;
+  var g = hex >> 8 & 0xFF;
+  var b = hex & 0xFF;
+  return rgb = { 'r': r, 'g': g, 'b': b};
+}
 function setColor(color, pulsate) {
-  if (pulsate) {
-    var keyFramePrefixes = ["-webkit-", "-moz-", ""], keyFrames = [], textNode = null;
-    // TODO: save value
-    for (var i in keyFramePrefixes){
-      keyFrames = '@'+keyFramePrefixes[i]+'keyframes pulsate {\
-                    from {background-color: ' + color + ';}\
-                    50% {background-color: ' + color + '; '+keyFramePrefixes[i]+'box-shadow: ' + color + ' 0 -1px 7px 1px, inset ' + color + ' 0 -1px 9px, ' + color + ' 0 2px 0; }\
-                    to {background-color: ' + color + ';}}';
-    }
-      
-//@keyframes pulsate {
-//    from { background-color: #FF0; }
-//    50% { background-color: #AA0; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #FF0 0 2px 0; }
-//    to { background-color: #FF0; }
-//}
-    textNode = document.createTextNode(keyFrames);
-    $("style#animation").append(textNode);
-    $("#LEDs .led").css('animation', 'pulsate 1s infinite;');
+  var hex = color.replace('#', '0x'), prefixes = ["-webkit-", "-moz-", ""], css = "";
+  var rgb = hexToRGB(hex);
+
+  // TODO: save value and on success
+  for (var i in prefixes){
+    css += prefixes[i] + 'box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset rgb(' + rgb.r * 0.25 + ', ' + rgb.g * 0.5 + ', ' + rgb.b * 0.75 + ') 0 -1px 9px, rgba(' + rgb.r + ', ' + rgb.g + ', ' + rgb.b + ', 0.8) 0 2px 12px;\
+             background-color: ' + color + ';';
+  }
+
+  $("#LEDs .led").attr('style', css);
+
+  if(pulsate){
+    $("#LEDs .led").addClass('pulsate');
+  } else {
+    $("#LEDs .led").removeClass('pulsate');
   }
 }
 
@@ -116,8 +118,10 @@ $(document).ready(function() {
 
   $('#colorPicker').submit(function(e) {
     e.preventDefault();
-    var color = $(this).find('input[name="color"]').val();
-    var pulsate = $(this).find('input[name="pulsate"]').val();
+    var color = $(this).find('input[name="color"]').val(), pulsate = false;
+    if($(this).find('input[name="pulsate"]:checked').length !== 0) {
+      pulsate = true;
+    }
     setColor(color, pulsate);
   });
 
