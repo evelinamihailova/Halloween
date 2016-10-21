@@ -1,6 +1,6 @@
 $(document).foundation();
 
-var audio = true;
+var audio = false;
 //var sadAudio = new Audio('../sounds/Hl.mp3');
 //var happyAudio = new Audio('../sounds/Maniacal Witches Laugh.mp3');
 //var evilAudio = new Audio('../sounds/Demon_Your_Soul_is_mine.mp3');
