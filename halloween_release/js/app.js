@@ -1,9 +1,10 @@
 $(document).foundation();
 
-var sadAudio = new Audio('../sounds/Hl.mp3');
-var happyAudio = new Audio('../sounds/Maniacal Witches Laugh.mp3');
-var evilAudio = new Audio('../sounds/Demon_Your_Soul_is_mine.mp3');
-var customAudio = new Audio('../sounds/Pain.mp3');
+var audio = true;
+//var sadAudio = new Audio('../sounds/Hl.mp3');
+//var happyAudio = new Audio('../sounds/Maniacal Witches Laugh.mp3');
+//var evilAudio = new Audio('../sounds/Demon_Your_Soul_is_mine.mp3');
+//var customAudio = new Audio('../sounds/Pain.mp3');
 
 var hideFaces = function () {
   $('#customFace').hide();
@@ -11,7 +12,7 @@ var hideFaces = function () {
   $('#evilFace').hide();
   $('#sadFace').hide();
 };
-var audio = false;
+
 
 function switchOffPupkin() {
   //TODO: ?
