@@ -4,8 +4,8 @@
 body{
   text-align: center;
 }
-.hide {
-    display:none;
+.hide{
+  display: none!important;
 }
 .centred{
   margin: auto;
@@ -15,21 +15,27 @@ body{
   left:0;
   right:0;
 }
-@font-face {
-    font-family: 'halloween';
-    src: url('../fonts/October Crow.ttf') format('truetype');
-   // src: url('../fonts//Hells Kittchen Devil God/Hells Kittchen Devil God.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'digital';
-    src: url('../fonts/square_dot_digital.ttf') format('truetype');
-}
 h1{
   font-family: halloween;
   font-size: 60px;
   color: red;
   margin-top: 30px;
   text-shadow: 2px 2px 3px brown;
+}
+h3 {
+  @extend h1;
+  z-index: 3;
+  text-shadow:2px 2px 2px black;
+  @include breakpoint(small only) {
+    text-align: left;
+    font-size: 20px;
+    padding-left: 20px;
+  }  
+  @include breakpoint(360px) {
+    text-align: center;
+    padding-left: 0px;
+    font-size: 30px;
+  }
 }
 .reveal{
   padding: 70px 30px;
@@ -52,17 +58,59 @@ h1{
 }
 #colorPicker{
   background-color: #2a2a2a;
-  width: 150px;
-  input{
+  width: 150px!important;
+  margin:auto;
+  right:0;
+  left:0!important;
+  form, .button{
+    margin-top: 20px;
+  }
+  label{
+    color: white;
+  }
+}
+#showTemperature{
+  width:142px!important;
+  margin:auto!important;
+  padding: 10px;
+  right:0;
+  left:0!important;
+  background-color: #2a2a2a;
+  .button{
+    margin: 0px;
+    font-family: Helvetica, sans-serif;
+    padding: 5px;
   }
 }
 .pumpkin{
   position: relative;
-  padding: 30px 50px;
   height: 100%;
   width:100%;
-  min-width: 350px;
+  min-width: 250px;
   max-height: 700px;
   max-width: 500px;
   margin: auto;
+  @include breakpoint(small only) {
+   padding: 0 10px;
+  }  
+  @include breakpoint(360px) {
+     padding: 0px 50px;
+  }
 }
+.close-button {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    color: #ccc;
+}
+.icon-images{
+    z-index: 6;
+    position: absolute;
+    right: 15px;
+    width: 55px;
+    top: 25px;
+    height: 41px;
+    color: transparent;
+    border: 2px solid white;
+}
+.thumbnail{margin: 0 5px;}

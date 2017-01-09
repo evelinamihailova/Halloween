@@ -176,7 +176,19 @@
         </div>
         <a id="showCustom" data-close>No, thanks</a>
       </div>
+      <div id="imageGallery" class="reveal" data-reveal>
+        <div class="close-button" data-close>
+          <span>&times;</span>
+        </div>
+        <div class="content row align-middle">
+    
+        </div>
+      </div>
       <div class="main hide">
+        <div class="icon-images" data-toggle="imageGallery">
+         <img class="" src="" alt="Last picture delivered from a pumpkin">
+        </div>
+        <h3>Hotness level: <span id="temperature">100</span>&deg;C</h3>
         <div class="pumpkin">
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           	 viewBox="0 0 307 432.367" enable-background="new 0 0 307 432.367" xml:space="preserve">
@@ -413,14 +425,18 @@
             </div>
           </div>
         </div>
-        <form id="colorPicker" class="dropdown-pane" data-dropdown>
-          <input name="color" type="color">
-          <label >Pulsate
-            <input name="pulsate" type="checkbox" value="pulsate">
-          </label>
-          <input class="button" value="Apply" data-close type="submit">
-          <a data-close>Close</a>
-        </form>
+        <div id="colorPicker" class="dropdown-pane" data-dropdown>
+          <div class="close-button" data-close>
+            <span>&times;</span>
+          </div>
+          <form >
+            <input name="color" type="color">
+            <label >Pulsate
+              <input name="pulsate" type="checkbox" value="pulsate">
+            </label>
+            <input class="button" value="Apply" data-close type="submit">
+          </form>
+        </div>
         <div id="moodSwitch" class="multistate-switch">
           <div class="handle"></div>
           <ul class="states">

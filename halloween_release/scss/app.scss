@@ -38,7 +38,7 @@
 //@include foundation-switch;
 //@include foundation-table;
 //@include foundation-tabs;
-//@include foundation-thumbnail;
+@include foundation-thumbnail;
 //@include foundation-title-bar;
 //@include foundation-tooltip;
 //@include foundation-top-bar;
@@ -50,9 +50,13 @@
 @include motion-ui-animations;
 
 @import
+    "scss/font-digital",
+    "scss/font-halloween",
+    "scss/keyframes",
     "scss/keyframes",
     "scss/mixins", 
     "scss/general",
     "scss/bg-switch",
     "scss/leds",
-    "scss/lens";
+    "scss/lens",
+    "scss/new";

@@ -62,6 +62,12 @@ a.lens-container {
         opacity: .8;
       }
   }
+  
+  &:active{
+    g.mid circle {
+      fill: black;
+    }
+  }
 }
 .sad a.lens-container {
   pointer-events: none;

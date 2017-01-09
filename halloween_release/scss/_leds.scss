@@ -1,31 +1,51 @@
 #LEDs{
   position: absolute;
-  width: calc(100% - 130px);
-  top: 37%;
+  top: 34%;
   left: 5px;
   right: 0;
   margin: auto;
+  width: calc(100% - 80px);
 }
 .led-box {
   height: 30px;
   width: 50%;
   margin: 10px 0;
   float: left;
-  &:first-child{
-    padding-left: 30px;
-  }
-  &:last-child{
-    padding-right: 30px;
-  }
   .led{
     margin: 0 auto;
-    width: 30px;
-    height: 30px;
     border-radius: 50%;
     &.pulsate{
       -webkit-animation: pulse 1s infinite;
       animation: pulse 1s infinite;
     }
+  }
+  
+  @include breakpoint(small only){
+    padding: 0;
+    .led{
+      width: 30px;
+      height: 30px;
+    }
+  }
+  @include breakpoint(360px){
+    .led{
+      width: 40px;
+      height: 40px;
+    }
+      &:first-child{
+        padding-left: 30px;
+      }
+      &:last-child{
+        padding-right: 30px;
+      }
+  }
+  @include breakpoint(440px){
+      &:first-child{
+        padding-left: 50px;
+      }
+      &:last-child{
+        padding-right: 50px;
+      }
   }
 }
 
@@ -69,7 +89,7 @@
 
 
 // MATRIX
-#ledMatrix{
+#ledMatrix{  
   position: absolute;
   width: 165px;
   height: auto;
@@ -128,6 +148,7 @@
       height: 53px;
       font-family: 'digital';
       font-size: 85px;
+      text-align: left;
       letter-spacing: 4px;
       color: red;
       font-weight: 600;
@@ -143,6 +164,13 @@
         animation: scroll-left 5s linear infinite;
       }
     }
+  }
+  
+  @include breakpoint(small only) {
+    transform: scale(0.7,0.7);
+  }  
+  @include breakpoint(320px) {
+    transform: none;
   }
 }
 .sad #ledMatrix input{

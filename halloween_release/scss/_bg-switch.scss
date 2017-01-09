@@ -13,6 +13,8 @@
   &.happy{@include linearGradient(#BE4405, #F6C60C);}
   &.evil{@include linearGradient(#c70808, #330000);}
   &.custom{@include linearGradient(#7707be, #000);}
+  overflow: hidden;
+  transition: all 1s ease-in;
 }
 .button, button{
   font-family:'halloween';
