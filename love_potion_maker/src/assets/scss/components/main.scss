@@ -1,19 +1,44 @@
-.shelves{
+.first{
+  width:600px;
+  margin: 120px auto auto auto;
+  text-align: center;
+  >div.row{
+    height:150px;
+  }
+}
+.shelve{
   position: absolute;
   width:600px;
+  
 }
+
 .potions{
-  @extend .shelves;
-  margin: auto;
+  top:90px;
+  margin: -100px auto auto auto;
+  height: 110px;
+  padding: 0 60px;
   >div{
-    height:100px;
     width:33%;
     text-align: center;
-    img{
-      width:auto;
-      height:auto;
-      max-height: 80px;
-      max-width: 80px;
+    position: relative;
+    img {
+      position:absolute;
+      margin: auto;
+      left:0;
+      right:0;
+      bottom: 0;
+      &.red{
+        max-width: 70px;
+      }
+      &.yellow{
+        max-width: 80px;
+      }
+      &.blue, 
+      &.green, 
+      &.orange, 
+      &.purple {
+        max-height:110px;
+      }
     }
   }
 }

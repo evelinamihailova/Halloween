@@ -1,31 +1,51 @@
-
-<div class="row">
-  <div class="columns small-12 shelves">
-    {{> shelves}}
-  </div>
-  <div class="potions row">
-    <div class="small-4 columns">
-      <img src="{{root}}assets/img/orange.png">
+<div class="first">
+  <div class="row">
+    <div class="columns small-12 shelve">
+      {{> shelve}}
     </div>
-    <div class="small-4 columns">
-      <img src="{{root}}assets/img/blue.png">
-    </div>
-    <div class="small-4 columns">
-      <img src="{{root}}assets/img/red.png">
-    </div>
-    <div class="small-4 columns">
-      <img src="{{root}}assets/img/green.png">
-    </div>
-    <div class="small-4 columns">
-      <img src="{{root}}assets/img/purple.png">
-    </div>
-    <div class="small-4 columns">
-      <img src="{{root}}assets/img/yellow.png">
+    <div class="columns small-12">
+      <div class="row potions">
+        <div class="small-4 columns orange">
+          <img class="orange" alt="orange potion" src="{{root}}assets/img/orange.png">
+        </div>
+        <div class="small-4 columns">
+          <img class="blue" alt="blue potion" src="{{root}}assets/img/blue.png">
+        </div>
+        <div class="small-4 columns">
+          <img class="red" alt="red potion" src="{{root}}assets/img/red.png">
+        </div>
+      </div>
     </div>
   </div>
-    
+  <div class="row">
+    <div class="columns small-12 shelve">
+      {{> shelve}}
+    </div>
+    <div class="columns small-12">
+      <div class="row potions">
+        <div class="small-4 columns">
+          <img class="green" alt="green potion" src="{{root}}assets/img/green.png">
+        </div>
+        <div class="small-4 columns">
+          <img class="purple" alt="purple potion" src="{{root}}assets/img/purple.png">
+        </div>
+        <div class="small-4 columns">
+          <img class="yellow" alt="yellow potion" src="{{root}}assets/img/yellow.png">
+        </div>
+      </div>
+    </div>
+     <div class="columns small-12">
+      <div class="row potions">
+        <div class="small-4 columns">
+          <div class="label">love potion</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="row">
+
+
+<div class="row hide">
   <div class="small-12 columns">
     <div class="primary callout">
       <p>description</p>
