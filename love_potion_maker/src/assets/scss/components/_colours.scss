@@ -1,10 +1,9 @@
-$yellow:  #d8ff00;
-$teal:    #00dfa6;
-$lorange: #ffb200;
-$dorange: #ff2b00;
+$yellow: #fff500;
+$green: #02db6f;
+$orange: #ffb200;
 $red: #f70013;
-$blue:    #00a6ff;
-$purple:  #b213f8;
+$blue: #0884ff;
+$purple: #de13f8;
 
 
 /* Mixins */
@@ -37,8 +36,8 @@ $purple:  #b213f8;
   border-right: $width solid $to;
   background-image:
     // both needed for top & bottom
-    linear-gradient(left, $from, $to),
-    linear-gradient(left, $from, $to);
+    linear-gradient(180deg, $from, $to),
+    linear-gradient(180deg, $from, $to);
   
   // 100% left & right, $width px top & bottom
   background-size: 100% $width;
@@ -48,7 +47,7 @@ $purple:  #b213f8;
 }
 
 @mixin border-image($from, $to, $width) {
-  border-image: linear-gradient(left, $from, $to);
+  border-image: linear-gradient(180deg, $from, $to);
   border-image-slice: 1;
   border-image-width: $width;
 }
@@ -69,48 +68,48 @@ $purple:  #b213f8;
   text-align: center;
 
   &.green span {
-    @include font-gradient($yellow, $teal, 180deg);
+    @include font-gradient($green, $yellow, 180deg);
   }
   &.orange span {
-    @include font-gradient($lorange, $dorange, 180deg);
+    @include font-gradient($orange, $red, 180deg);
   }
   &.blue span {
-    @include font-gradient($blue, $purple, 180deg);
+    @include font-gradient($blue, $green, 180deg);
   }
   &.yellow span {
-    @include font-gradient($yellow, $lorange, 180deg);
+    @include font-gradient($yellow, $orange, 180deg);
   }
   &.red span {
-    @include font-gradient($dorange, $red, 180deg);
+    @include font-gradient($red, $purple, 180deg);
   }
   &.purple span {
-    @include font-gradient($red, $purple, 180deg);
+    @include font-gradient($purple, $blue, 180deg);
   }
 }
 /* Box-Shadow Technique */
 .btn {
   &.green {
-    @include box-gradient($yellow, $teal, 1px);
+    @include box-gradient($green, $yellow, 1px);
     &:hover{background-color: rgba(0, 128, 128, .3)}
   }
   &.orange {
-    @include box-gradient($lorange, $dorange, 1px);
+    @include box-gradient($orange, $red, 1px);
     &:hover{background-color: rgba(250, 173, 0, 0.3)}
   }
   &.blue {
-    @include box-gradient($blue, $purple, 1px);
+    @include box-gradient($blue, $green, 1px);
     &:hover{background-color: rgba(9, 123, 237, 0.3)}
   }
   &.yellow {
-    @include box-gradient($yellow, $lorange, 1px);
+    @include box-gradient($yellow, $orange, 1px);
     &:hover{background-color: rgba(221, 250, 0, 0.3)}
   }
   &.red {
-    @include box-gradient($dorange, $red, 1px);
+    @include box-gradient($red, $purple, 1px);
     &:hover{background-color: rgba(250, 0, 58, 0.3)}
   }
   &.purple {
-    @include box-gradient($red, $purple, 1px);
+    @include box-gradient($purple, $blue, 1px);
     &:hover{background-color: rgba(169, 7, 255, 0.3)}
   }
 }
@@ -118,23 +117,32 @@ $purple:  #b213f8;
 /* Gradient & Border Technique */
 .border {
   .green {
-    @include border-gradient($yellow, $teal, 2px);
+    @include border-gradient($yellow, $green, 2px);
+  }
+  .red {
+    @include border-gradient($orange, $red, 2px);
+  }
+  .purple {
+    @include border-gradient($blue, $purple, 2px);
+  }
+  .yellow {
+    @include border-gradient($green, $yellow, 2px);
   }
   .orange {
-    @include border-gradient($lorange, $dorange, 2px);
+    @include border-gradient($red, $orange, 2px);
   }
   .blue {
-    @include border-gradient($blue, $purple, 2px);
+    @include border-gradient($green, $blue, 2px);
   }
 }
 
 /* Border Image Gradient Technique */
 .border-image {
   .green {
-    @include border-image($yellow, $teal, 2px);
+    @include border-image($yellow, $green, 2px);
   }
   .orange {
-    @include border-image($lorange, $dorange, 2px);
+    @include border-image($orange, $red, 2px);
   }
   .blue {
     @include border-image($blue, $purple, 2px);

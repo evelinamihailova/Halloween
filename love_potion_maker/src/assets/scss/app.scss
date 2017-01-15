@@ -50,7 +50,8 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-@import "components/colours";
 @import "components/main";
 @import "components/glow";
 @import "components/shelf";
+
+@import "components/colours";
