@@ -1,67 +1,67 @@
 .potions img.blue {
-    animation: blue 1.5s ease-in-out infinite alternate;
+    animation: blue 1.3s ease-in-out infinite alternate;
 }
 .potions img.green {
-    animation: green 1.5s ease-in-out infinite alternate;
+    animation: green 1.3s ease-in-out infinite alternate;
 }
 .potions img.yellow {
-    animation: yellow 1.5s ease-in-out infinite alternate;
+    animation: yellow 1.3s ease-in-out infinite alternate;
 }
 .potions img.orange {
-    animation: orange 1.5s ease-in-out infinite alternate;
+    animation: orange 1.3s ease-in-out infinite alternate;
 }
 .potions img.red {
-    animation: red 1.5s ease-in-out infinite alternate;
+    animation: red 1.3s ease-in-out infinite alternate;
 }
 .potions img.purple {
-    animation: purple 1.5s ease-in-out infinite alternate;
+    animation: purple 1.3s ease-in-out infinite alternate;
 }
 ///////////////////////////////////////////////////////////////
 @keyframes blue {
   from {    
-    filter: drop-shadow(0px 0px 8px blue);
+    filter: drop-shadow(0px 0px 10px blue);
   }
   to {
-    filter: drop-shadow(0px 0px 40px blue);
+    filter: drop-shadow(0px 0px 30px blue);
   }
 }
 @keyframes green {
   from {    
-    filter: drop-shadow(0px 0px 8px green);
+    filter: drop-shadow(0px 0px 10px green);
   }
   to {
-    filter: drop-shadow(0px 0px 20px green);
+    filter: drop-shadow(0px 0px 30px green);
   }
 }
 @keyframes yellow {
   from {    
-    filter: drop-shadow(0px 0px 8px yellow);
+    filter: drop-shadow(0px 0px 10px yellow);
   }
   to {
-    filter: drop-shadow(0px 0px 20px yellow);
+    filter: drop-shadow(0px 0px 30px yellow);
   }
 }
 @keyframes orange {
   from {    
-    filter: drop-shadow(0px 0px 8px orange);
+    filter: drop-shadow(0px 0px 10px orange);
   }
   to {
-    filter: drop-shadow(0px 0px 20px orange);
+    filter: drop-shadow(0px 0px 30px orange);
   }
 }
 @keyframes red {
   from {    
-    filter: drop-shadow(0px 0px 8px red);
+    filter: drop-shadow(0px 0px 10px red);
   }
   to {
-    filter: drop-shadow(0px 0px 20px red);
+    filter: drop-shadow(0px 0px 30px red);
   }
 }
 @keyframes purple {
   from {    
-    filter: drop-shadow(0px 0px 8px purple);
+    filter: drop-shadow(0px 0px 10px purple);
   }
   to {
-    filter: drop-shadow(0px 0px 20px purple);
+    filter: drop-shadow(0px 0px 30px purple);
   }
 }

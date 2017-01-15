@@ -1,20 +1,16 @@
 body{
-  background-color: #222;
+  background-color: #111;
 }
 @import url('https://fonts.googleapis.com/css?family=Euphoria+Script');
 
 .label {
-  position: absolute;
-  left:0;
-  right:0;
-  margin: auto;
-  width:110px;
+  position: relative;
   border:1px solid #ad9e7a;
-  bottom:-23px;
+  bottom:-141px;
  // font-family: 'Euphoria Script', cursive;
-  font-size: 9px;
+  font-size: 8.5px;
   background-color: beige;
-  padding: 1px;
+  padding: 0px 9px;
   line-height: 12px;
   color: #553800;
   &:before, &:after{
@@ -32,25 +28,9 @@ body{
     left:auto;
   }
 }
-//.first{
-//  max-width: 900px;
-//  margin: 120px auto auto auto;
-//  text-align: center;
-//  >div.row{
-//    height:150px;
-//  }
-//}
-//.shelve{
-//  position: absolute;
-//  width:900px;
-//  
-//}
-
 .potions{
-  //top:90px;
-//  margin: -100px auto auto auto;
   height: 140px;
-  padding: 0 30px;
+  padding: 0;
   >div{
     width:33%;
     text-align: center;
@@ -73,4 +53,16 @@ body{
       }
     }
   }
+}
+//
+
+.reveal{
+  background-color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  border:none;
+//    background: linear-gradient(to left top, rgba(253, 253, 253, 0.6) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(253, 253, 253, 0.6) 100%);
+    //border: 1px solid #56534c;
+ //   box-shadow: 2px 2px 0px rgba(226, 222, 222, 0.9), inset 2px 2px 0px rgba(150, 150, 150, 0.9);
+    border-radius: 5px;
+
 }
