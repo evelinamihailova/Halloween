@@ -61,25 +61,15 @@ body{
       left:0;
       right:0;
       bottom: 0;
-  &:after{
-        position: absolute;
-          content: "";
-          background-color: red;
-          width:100px;
-          height:100px;
-      
-      }
       &.red,
       &.yellow{
-        max-width: 180px;
-        margin: -40px -25%;
+        max-width: 160px;
       }
       &.blue,
       &.orange,
       &.green,
       &.purple {
-        max-width: 180px;
-        margin: -40px -25%;
+        max-height: 140px;
       }
     }
   }
