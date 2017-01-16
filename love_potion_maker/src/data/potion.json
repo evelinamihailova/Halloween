@@ -1,0 +1,104 @@
+[  
+  {  
+    "name":"01010LOVE",
+    "type":"blue",
+    "description":"lorem ipsum",
+    "ingredient":[
+      {  
+        "parts":"1",
+        "name":"smth"
+      }, {  
+        "parts":"2",
+        "name":"smth"
+      }, {  
+        "parts":"2",
+        "name":"smth"
+      }
+    ]
+  },
+  {  
+    "name":"Binary nectar",
+    "type":"green",
+    "description":"lorem ipsum",
+    "ingredient":[
+      {  
+        "parts":"1",
+        "name":"smth"
+      }, {  
+        "parts":"2",
+        "name":"smth"
+      }, {  
+        "parts":"2",
+        "name":"smth"
+      }
+    ]
+  },
+  {  
+    "name":"Seluxit Love Slammer",
+    "type":"yellow",
+    "description":"lorem ipsum",
+    "ingredient":[  
+      {  
+        "parts":"1",
+        "name":"smth"
+      }, {  
+        "parts":"2",
+        "name":"smth"
+      }, {  
+        "parts":"2",
+        "name":"smth"
+      }
+    ]
+  },
+  {  
+    "name":"IoTini Passion",
+    "type":"orange",
+    "description":"lorem ipsum",
+    "ingredient":[ 
+      {  
+        "parts":"1",
+        "name":"smth"
+      }, {  
+        "parts":"2",
+        "name":"smth"
+      }, {  
+        "parts":"2",
+        "name":"smth"
+      }
+    ]
+  },
+  {  
+    "name":"Sex on the Wave",
+    "type":"red",
+    "description":"lorem ipsum",
+    "ingredient":[
+      {  
+        "parts":"1",
+        "name":"smth"
+      }, {  
+        "parts":"2",
+        "name":"smth"
+      }, {  
+        "parts":"2",
+        "name":"smth"
+      }
+    ]
+  },
+  {  
+    "name":"5G Spot",
+    "type":"purple",
+    "description":"lorem ipsum",
+    "ingredient":[
+      {  
+        "parts":"1",
+        "name":"smth"
+      }, {  
+        "parts":"2",
+        "name":"smth"
+      }, {  
+        "parts":"2",
+        "name":"smth"
+      }
+    ]
+  }
+]

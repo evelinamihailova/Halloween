@@ -1,51 +1,25 @@
 <section class="shelf">
-  <div>
-      <div class="row potions">
+  <div class="row collapse potions">
+     {{#each potion}}
         <div class="small-4 medium-2 columns">
-          <img data-open="bluePotionPanel" class="blue" alt="blue potion" src="{{root}}assets/img/blue.png">
-          <div class="label">01010LOVE</div>
+          <img data-open="{{type}}PotionPanel" class="{{type}}" alt="{{type}} potion" src="{{root}}assets/img/{{type}}.png">
+          <div class="label">{{name}}</div>
         </div>
-        <div class="small-4 medium-2 columns">
-          <img data-open="greenPotionPanel" class="green" alt="green potion" src="{{root}}assets/img/green.png">
-          <div class="label">Binary nectar</div>
-        </div>
-        <div class="small-4 medium-2 columns">
-          <img data-open="yellowPotionPanel" class="yellow" alt="yellow potion" src="{{root}}assets/img/yellow.png">
-          <div class="label">Seluxit Love Slammer</div>
-        </div>
-         <div class="small-4 medium-2 columns orange">
-          <img data-open="orangePotionPanel" class="orange" alt="orange potion" src="{{root}}assets/img/orange.png">
-          <div class="label">IOTini Passion</div>
-        </div>
-        <div class="small-4 medium-2 columns">
-          <img data-open="redPotionPanel" class="red" alt="red potion" src="{{root}}assets/img/red.png">
-          <div class="label">Sex on the Wave</div>
-        </div>
-        <div class="small-4 medium-2 columns">
-          <img data-open="purplePotionPanel" class="purple" alt="purple potion" src="{{root}}assets/img/purple.png">
-          <div class="label">5G spot</div>
-        </div>
-      </div>
+    {{/each}}
   </div>
 </section>
-<p>{{potions.blue.name}}</p>
+{{#each potion}}
+  <div class="reveal {{type}}" id="{{type}}PotionPanel" data-reveal>
+    <img class="{{type}}" alt="{{type}} potion" src="{{root}}assets/img/{{type}}.png">
+    <h2>{{name}}</h2>
 
-    <div class="btn green"><span>Brew</span></div>
-    <div class="btn yellow"><span>Brew</span></div>
-    <div class="btn orange"><span>Brew</span></div>
-    <div class="btn red"><span>Brew</span></div>
-    <div class="btn purple"><span>Brew</span></div>
-    <div class="btn blue"><span>Brew</span></div>
-    <div class="btn green"><span>Brew</span></div>
-
-
-<div class="reveal red" id="bluePotionPanel" data-reveal>
-  <h2>01010LOVE</h2>
-          <img data-open="purplePotionPanel" class="purple" alt="purple potion" src="{{root}}assets/img/purple.png">
-  <p>description</p>
-  <label>Ingredients</label>
-  <ul>
-    <li>1cl of passion</li>
-  </ul>
-  <div class="btn red"><span>Brew</span></div>
-</div>
+    <p>{{description}}</p>
+    <ul>
+      {{#each ingredient}}
+        <li>{{parts}} of {{name}}</li>
+      {{/each}}
+    </ul>
+    <br>
+    <div class="btn {{type}}"><span>Brew</span></div>
+  </div>
+{{/each}}

@@ -1,13 +1,12 @@
 body{
   background-color: #111;
 }
-@import url('https://fonts.googleapis.com/css?family=Euphoria+Script');
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
 
 .label {
   position: relative;
   border:1px solid #ad9e7a;
-  bottom:-141px;
- // font-family: 'Euphoria Script', cursive;
+  bottom:-118px;
   font-size: 8.5px;
   background-color: beige;
   padding: 0px 9px;
@@ -43,7 +42,7 @@ body{
       bottom: 0;
       &.red,
       &.yellow{
-        max-width: 160px;
+        max-width: 100px;
       }
       &.blue,
       &.orange,
@@ -57,41 +56,65 @@ body{
 //
 
 .reveal{
-  background-color: rgba(0, 0, 0,0.5);
-  width:500px;
-  height:500px;
+  background-color: rgba(0, 0, 0,0.8);
+  background-image: url(../img/bg.png);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  width:450px;
+  height:450px;
   text-align: center;
   border:none;
   border-radius: 100%;
+  padding: 40px;
+  overflow:hidden; 
+  
+    animation: heartbeat 0.9s ease-in-out infinite alternate;
   h2{
-    font-family: 'Euphoria Script', cursive;
+    
+    font-family: 'Sacramento', cursive;
+  }
+  .description{
+  }
+  ul{
+    list-style: none;
+    text-align: left;
+    margin: 0 auto;
+    font-size: 12px;
+    display: inline-block;
   }
   img{
-    max-height: 150px;
-    max-width: 130px;
+    max-height: 90px;
+    max-width: 70px;
+    animation: heartbeat-filter 0.9s ease-in-out infinite alternate;
   }
   &.red{
-    box-shadow: 0px 0px 50px red;
-
+    color: red;
   }
   &.purple{
-    box-shadow: 0px 0px 50px #ca11e2;
     color: #ca11e2;
   }
   &.yellow{
-    box-shadow: 0px 0px 50px #e2ff00;
     color: #e2ff00;
   }
   &.orange{
-    box-shadow: 0px 0px 50px orange;
-    color: orange;
+    color: #ff7600;
   }
   &.green{
-    box-shadow: 0px 0px 50px #8cd600;
     color: #8cd600;
   }
   &.blue{
-    box-shadow: 0px 0px 50px #0093ff;
     color: #0093ff;
   }
+}
+@keyframes heartbeat-filter {
+  0%   {filter: drop-shadow(0px 0px 10px);}
+  50%  {filter: drop-shadow(0px 0px 10px);}
+  80%  {filter: drop-shadow(0px 0px 40px);}
+  100% {filter: drop-shadow(0px 0px 30px);}
+}
+@keyframes heartbeat {
+  0%   {box-shadow: 0px 0px 10px;}
+  50%  {box-shadow: 0px 0px 10px;}
+  80%  {box-shadow: 0px 0px 50px;}
+  100% {box-shadow: 0px 0px 40px;}
 }

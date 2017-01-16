@@ -17,33 +17,34 @@
     animation: purple 1.3s ease-in-out infinite alternate;
 }
 ///////////////////////////////////////////////////////////////
+
 @keyframes blue {
   from {    
     filter: drop-shadow(0px 0px 10px blue);
   }
   to {
-    filter: drop-shadow(0px 0px 30px blue);
+    filter: drop-shadow(0px 0px 30px #00baff);
   }
 }
 @keyframes green {
   from {    
-    filter: drop-shadow(0px 0px 10px green);
+    filter: drop-shadow(0px 0px 10px #00ff89);
   }
   to {
-    filter: drop-shadow(0px 0px 30px green);
+    filter: drop-shadow(0px 0px 20px #b1ff00);
   }
 }
 @keyframes yellow {
   from {    
-    filter: drop-shadow(0px 0px 10px yellow);
+    filter: drop-shadow(0px 0px 10px #ffe200);
   }
   to {
-    filter: drop-shadow(0px 0px 30px yellow);
+    filter: drop-shadow(0px 0px 20px yellow);
   }
 }
 @keyframes orange {
   from {    
-    filter: drop-shadow(0px 0px 10px orange);
+    filter: drop-shadow(0px 0px 10px #ff5800);
   }
   to {
     filter: drop-shadow(0px 0px 30px orange);
@@ -51,17 +52,17 @@
 }
 @keyframes red {
   from {    
-    filter: drop-shadow(0px 0px 10px red);
+    filter: drop-shadow(0px 0px 10px #ff0000);
   }
   to {
-    filter: drop-shadow(0px 0px 30px red);
+    filter: drop-shadow(0px 0px 30px #ff5757);
   }
 }
 @keyframes purple {
   from {    
-    filter: drop-shadow(0px 0px 10px purple);
+    filter: drop-shadow(0px 0px 10px #eb00ff);
   }
   to {
-    filter: drop-shadow(0px 0px 30px purple);
+    filter: drop-shadow(0px 0px 30px #eb00eb);
   }
 }
