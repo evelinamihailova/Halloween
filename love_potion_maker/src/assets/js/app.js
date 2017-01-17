@@ -1,14 +1,7 @@
 $(document).foundation();
-var bluePotion = $('img.blue'),
-    greenPotion = $('img.green'),
-    yellowPotion = $('img.blue'),
-    orangePotion = $('img.blue'),
-    redPotion = $('img.blue'),
-    purplePotion = $('img.blue');
 
-$(bluePotion).click(function(){
-  
-});
+var brewPotion = function(potion){
+  console.log(potion);
 
 //getState("blue").save({"data": "2"});
 //getState("temperature","Report").get("data");
@@ -19,3 +12,4 @@ $(bluePotion).click(function(){
 //  
 //  }
 //});
+};

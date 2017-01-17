@@ -57,23 +57,26 @@ body{
 
 .reveal{
   background-color: rgba(0, 0, 0,0.8);
-  background-image: url(../img/bg.png);
-  background-size: auto 100%;
+//  background-image: url(../img/bg.png);
+  background-image: url(../img/ornament.png);
+  background-size: 100% 100%;
   background-repeat: no-repeat;
+  background-blend-mode: color-burn;
   width:450px;
   height:450px;
   text-align: center;
   border:none;
   border-radius: 100%;
   padding: 40px;
-  overflow:hidden; 
-  
-    animation: heartbeat 0.9s ease-in-out infinite alternate;
+  overflow:hidden;
+  animation: heartbeat 0.9s ease-in-out infinite alternate;
   h2{
     
     font-family: 'Sacramento', cursive;
   }
-  .description{
+  p{
+    font-size: 10px;
+    font-family: 'Sacramento', cursive;
   }
   ul{
     list-style: none;
@@ -83,8 +86,9 @@ body{
     display: inline-block;
   }
   img{
-    max-height: 90px;
-    max-width: 70px;
+    max-height: 80px;
+    max-width: 65px;
+    margin-bottom: 10px;
     animation: heartbeat-filter 0.9s ease-in-out infinite alternate;
   }
   &.red{
@@ -109,12 +113,12 @@ body{
 @keyframes heartbeat-filter {
   0%   {filter: drop-shadow(0px 0px 10px);}
   50%  {filter: drop-shadow(0px 0px 10px);}
-  80%  {filter: drop-shadow(0px 0px 40px);}
+  80%  {filter: drop-shadow(0px 0px 50px);}
   100% {filter: drop-shadow(0px 0px 30px);}
 }
 @keyframes heartbeat {
   0%   {box-shadow: 0px 0px 10px;}
   50%  {box-shadow: 0px 0px 10px;}
-  80%  {box-shadow: 0px 0px 50px;}
+  80%  {box-shadow: 0px 0px 70px;}
   100% {box-shadow: 0px 0px 40px;}
 }
