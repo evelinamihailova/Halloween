@@ -1,13 +1,15 @@
-<section class="shelf">
-  <div class="row collapse potions">
-     {{#each potion}}
-        <div class="small-4 medium-2 columns">
-          <img data-open="{{type}}PotionPanel" class="{{type}}" alt="{{type}} potion" src="{{root}}assets/img/{{type}}.png">
-          <div class="label">{{name}}</div>
-        </div>
+<div class=" align-middle">
+  <div class="shelf columns small-10">
+    <div class="row collapse potions">
+    {{#each potion}}
+      <div class="small-4 medium-2 columns">
+        <img data-open="{{type}}PotionPanel" class="{{type}}" alt="{{type}} potion" src="{{root}}assets/img/{{type}}.png">
+        <div class="label">{{name}}</div>
+      </div>
     {{/each}}
+    </div>
   </div>
-</section>
+</div>
 {{#each potion}}
   <div class="reveal {{type}}" id="{{type}}PotionPanel" data-reveal>
     <img class="{{type}}" alt="{{type}} potion" src="{{root}}assets/img/{{type}}.png">
@@ -20,6 +22,6 @@
       {{/each}}
     </ul>
     <br>
-    <div onclick="brewPotion('{{this}}');" class="btn {{type}}"><span>Brew</span></div>
+    <div onclick="brewPotion('{{this}}');" class="btn {{type}}"><span>Mix potion</span></div>
   </div>
 {{/each}}
